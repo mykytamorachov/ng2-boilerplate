@@ -2,7 +2,19 @@
 import {Component} from 'angular2/core';
 
 @Component({
-    selector: 'my-app',
-    template: '<h1>My First Angular 2 App</h1>'
+  selector: 'my-app',
+  templateUrl: '../templates/template.html',
+  directives: [AppComponent]
 })
-export class AppComponent { }
+
+export class AppComponent {
+
+	users: object[];
+	title: string;
+
+  constructor() {
+    this.users = [{name: "1", id : "2"}, {name: "1", id : "2"}, {name: "1", id : "2"}];
+    this.title = "My First Angular2 App";
+  };
+	
+};
